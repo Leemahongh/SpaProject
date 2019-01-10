@@ -10,3 +10,24 @@
 home :
   path: /
   controller: App\Controller\HomeController::index
+
+#reservation :
+#  path: /Réservation
+#  controller: App\Controller\ReservationController::index
+
+#testimony:
+#  path: /Témoignages
+#  controller: App\Controller\TestimonyController::index
+
+about:
+  path: /Nous Connaitre
+  controller: App\Controller\AboutController::index
+
+#blog:
+#  path: /Blog
+#  controller: App\Controller\BlogController::index
+
+contact :
+  path: /Contact
+  controller: App\Controller\ContactController::index
+
