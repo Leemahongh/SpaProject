@@ -27,7 +27,10 @@ about:
 #  path: /Blog
 #  controller: App\Controller\BlogController::index
 
-contact :
+contact:
   path: /Contact
   controller: App\Controller\ContactController::index
 
+login:
+  path: /Connexion
+  controller: App\Controller\LoginController::index

@@ -1,23 +1,11 @@
 <?php
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 
-class HomeController extends Controller
+class HomeController extends AbstractController
 {
-    /**
-     * HomeController constructor.
-     * @var Environment
-     */
-
-    private $twig;
-
-    public function __construct(Environment $twig)
-    {
-        $this->twig = $twig;
-    }
 
     public function index ():Response
     {

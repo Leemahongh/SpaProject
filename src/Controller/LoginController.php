@@ -4,12 +4,12 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class AboutController extends AbstractController
+class LoginController extends AbstractController
 {
 
     public function index ():Response
     {
-        return $this->render('pages/about.html.twig');
+        return $this->render('pages/login.html.twig');
     }
 
 }

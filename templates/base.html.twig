@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}SpaProject{% endblock %}</title>+
-        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="fonts/ProximaNovaA-Semibold.css">
         <link rel="stylesheet" href="fonts/ProximaNova-Extrabld.css">
@@ -18,47 +18,69 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <nav class="navbar navbar-default header-section">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ path('home') }}">
-                        <img src="image/logo.png" width="243" height="54" alt="" class="img-responsive">
-                    </a>
-                </div>
+        <nav class="navbar navbar-expand-md navbar-light header-section">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand" href="{{ path('home') }}"><img src="image/logo.png" alt="logo" class="img-responsive"></a>
+            <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ path('home') }}">Accueil</a></li>
-                        <li><a href="#">Réservation</a></li>
-                        <li><a href="#">Témoignages</a></li>
-                        <li><a href="{{ path('about') }}">Nous connaître</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="{{ path('contact') }}">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i>Panier</a></li>
-                        <li><a href="#"><i class="fa fa-sign-in"></i></a></li>
-                    </ul>
-               </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="{{ path('home') }}">Accueil</a></li>
+                    <li class="nav-item disabled"><a href="#">R&eacute;servation</a></li>
+                    <li class="nav-item disabled"><a href="#">T&eacute;moignages</a></li>
+                    <li class="nav-item"><a href="{{ path('about') }}">Nous conna&icirc;tre</a></li>
+                    <li class="nav-item disabled"><a href="#">Blog</a></li>
+                    <li class="nav-item"><a href="{{ path('contact') }}">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item disabled"><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li class="nav-item disabled"><a href="#"><i class="fa fa-shopping-cart"></i>Panier</a></li>
+                    <li class="nav-item"><a href="{{ path('login') }}"><i class="fa fa-sign-in"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </nav>
+
         {% block body %}{% endblock %}
+
+        <div class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul class="social-media">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 copyright">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ path('home') }}">Accueil</a></li>
+                            <li><a href="#">R&eacute;servation</a></li>
+                            <li><a href="#">T&eacute;moignages</a></li>
+                            <li><a href="{{ path('about') }}">Nous conna&icirc;tre</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="{{ path('contact') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-button">
+                            <a class="scroll" href="#top-button"><i class="fa fa-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container center">
+                Propos&eacute; par <strong>NoX ©</strong> - <a href="{{ path('login') }}"><i class="fa fa-sign-in"></i></a>
+            </div>
+        </div>
+
         {% block javascripts %}{% endblock %}
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/custom.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     </body>
 </html>
