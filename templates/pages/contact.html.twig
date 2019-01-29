@@ -6,13 +6,36 @@
 
     <div class="cover-section" id="top-button">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow fadeInDown animated">
-                    <div class="slider-item">
-                        <img src="image/logo-simple.png" width="117" height="144" alt="">
-                        <h2>Anne-Cécile Viault Chervier</h2>
-                        <p>Masseur-kinésithérapeute à Venelles, je vous propose des prestations de Massage Californien à mon cabinet pour tous les particuliers.</p>
+            <div class="row center">
+                <img src="image/logo-simple.png" width="117" height="144" alt="">
+            </div>
+            <h1>Nous contacter !</h1>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="media-container-column col-lg-8" data-form-type="formoid">
+                    {{ form_start(form) }}
+                    <div class="my-custom-class-for-errors">
+                        {{ form_errors(form) }}
                     </div>
+                    <div class="row row-sm-offset">
+                        <div class="col-md-4 multi-horizontal" data-for="firstname">
+                            {{ form_row(form.prenom) }}
+                        </div>
+                        <div class="col-md-4 multi-horizontal" data-for="lastname">
+                            {{ form_row(form.nom) }}
+                        </div>
+                        <div class="col-md-4 multi-horizontal" data-for="phone">
+                            {{ form_row(form.phone) }}
+                        </div>
+                    </div>
+                    {{ form_row(form.email) }}{{ form_help(form) }}
+
+                    {{ form_rest(form) }}
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-success">Envoyer</button>
+                    </div>
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>

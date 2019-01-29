@@ -1,12 +1,10 @@
 {# templates/emails/registration.html.twig #}
-<h3>Voilà qui est fait ! Vous êtes enregistré...</h3>
+<h3>Voil&agrave; qui est fait ! Vous &ecirc;tes enregistr&eacute;...</h3>
 
 Bonjour {{ name }}! Vous vous êtes enregistré avec succès.
 
-{# example, assuming you have a route named "login" #}
 Pour vous connecter, rendez-vous sur ce lien : <a href="{{ url('login') }}">...</a>.
 
 Merci, et à bientôt !
 
-{# Makes an absolute URL to the /images/logo.png file #}
 <img src="{{ absolute_url(asset('images/logo.png')) }}">

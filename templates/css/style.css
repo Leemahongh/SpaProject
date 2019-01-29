@@ -1,22 +1,9 @@
-/*	################################################################
-	File Name: style.css
-	Template Name: Beauty Spa
-	Created By: Shah Zobayer Ahmed
-	http://zobayer.com
-
-	1) GENERAL STRUCTURES
-	2) HEADER SECTION
-	3) ABOUT SECTION
-	4) NEWS LATTER SECTION
-	5) CONTACT SECTION
-	6) FOOTER SECTION
-	7) RESPONSIVE STRUCTURES
-################################################################# */
-/* *******************
+/********************
  * 1. GENERAL SECTION
- ******************* */
+ ********************/
 
-*{margin: 0;padding: 0px;}
+*{margin: 0;padding: 0;}
+
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -41,35 +28,45 @@ div.body {
     line-height: 0;
     width: 100%;
 }
+
 ::-moz-selection {
     color: #ccc;
     text-shadow: none;
     background: #ccc;
 }
+
 ::-webkit-input-placeholder {
     color: #fff !important;
 }
+
 :-moz-placeholder {
     color: #fff !important;
 }
+
 ::-moz-placeholder {
     color: #000 !important;
 }
+
 :-ms-input-placeholder {
     color: #000 !important;
 }
+
 .subscribe::-webkit-input-placeholder {
     color: #000 !important;
 }
+
 .subscribe:-moz-placeholder {
     color: #000 !important;
 }
+
 .subscribe::-moz-placeholder {
     color: #000 !important;
 }
+
 .subscribe:-ms-input-placeholder {
     color: #000 !important;
 }
+
 *,*:after,*:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -77,20 +74,24 @@ div.body {
     padding: 0;
     margin: 0;
 }
+
 a {
     color: #008000;
     padding: 0;
     margin: 0;
     text-decoration: none;
 }
+
 a:hover,a:focus {
     text-decoration: none;
     color: #0B401F;
 }
+
 a img {
     border: none;
     vertical-align: bottom;
 }
+
 a.remove {
     display: block;
     height: 18px;
@@ -103,68 +104,73 @@ a.remove {
     border-style: solid;
     border-width: 1px
 }
+
 h1,h2,h3,h4,h5,h6 {
-    letter-spacing: 0px;
+    letter-spacing: 0;
     font-weight: normal;
     position: relative;
     padding: 0 0 10px 0;
-    font-weight: normal;
     font-family: 'Roboto', serif;
     line-height: 140% !important;
     color: #008000;
 }
+
 h1 {font-size: 22px;}
 h2 {font-size: 20px;}
 h3 {font-size: 18px;}
 h4 {font-size: 16px;}
 h5 {font-size: 14px;}
 h6 {font-size: 13px;}
+
 .lead {
     font-family: 'Raleway', Arial,sans-serif !important;
     font-size: 18px;
     margin: 15px 0;
     padding: 0;
 }
+
 audio,video {
     max-width: 100%;
     height: auto;
 }
-iframe,embed,object {
+
+embed,object {
     max-width: 100%;
 }
+
 input,
 textarea {
     color: #8F8F8F !important;
     box-shadow: none;
     outline: none
 }
+
 .left {
     float: left;
     display: block;
 }
+
 .center {
     margin: 0 auto;
     display: block;
     clear: both;
-    display: block;
 }
+
 .right {
     float: right;
     display: block;
 }
 
-
 body .fixed{
     position: fixed;
     width: 100%;
-    display: block;
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
 }
 
-/*
-    HEADER SECTION
-*/
+/********************
+ * 2. HEADER SECTION
+ ********************/
 .header-section {
     position: absolute;
     top: 0;
@@ -177,66 +183,51 @@ body .fixed{
     min-height: auto;
 }
 
-
-.navbar-header {
+img.navbar-header {
+    width: 243px;
+    height: 54px;
+    position: absolute;
 }
-
 
 .navbar-brand {
     height: auto;
     padding-left: 0;
     padding-right: 0;
 }
-button.navbar-toggle {
-    margin-top: 25px;
+
+button.navbar-toggler {
+    margin-right: 25px;
+    Background: whitesmoke;
 }
-.nav {
-}
+
 .navbar-nav {
     margin-left: 80px;
     margin-top: 16px;
     display: block;
 }
 
-.navbar-nav > li {
-}
-
 .navbar-nav > li > a {
     color: #fff !important;
     font-size: 14px;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
+    z-index: 999;
 }
+
 .navbar-nav > li > a:hover{
     color: #008000 !important;
+    background: transparent;
 }
 
 i.fa.fa-shopping-cart {
     color: #008000;
     margin-right: 10px;
 }
-.navbar-right > li {
-}
-
-.navbar-right > li > a {
-}
-
-.fa-search {
-}
-
-.fa-cart {
-}
 
 .cover-section {
-    background: url(../image/slider.png) no-repeat;
+    background: url(../../public/image/slider.png) no-repeat;
     background-size: cover;
     text-align: center;
     padding: 150px 0;
-}
-
-.container {
-}
-
-.row {
 }
 
 .col-md-12 {
@@ -264,22 +255,22 @@ i.fa.fa-shopping-cart {
     font-size: 24px;
     font-weight: 800;
     text-transform: uppercase;
-    font-family:'ProximaNova-Extrabld';
+    font-family:'ProximaNova-Extrabld', sans-serif;
     color: #fff;
     margin:0;
 }
 
 .slider-item > p {
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #fff;
     margin: 0;
 }
 
-/*
-Purilfy section
- */
+/********************
+ * 3. PURILFY SECTION
+ ********************/
 .purilfy-section {
     color: #fff;
     background: #008000;
@@ -292,61 +283,62 @@ Purilfy section
 }
 
 .purifliy-item > h3 {
-    margin: 0;
     padding: 0;
     color:#fff;
     font-weight: 700;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     font-size: 26px;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
 
 .purifliy-item > p {
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-size: 15px;
     line-height: 24px;
 }
 
-
-/*
-OFFER SECTION
- */
+/********************
+ * 4. OFFER SECTION
+ ********************/
 .offer-section {
     padding: 110px 0;
     display: block;
     text-align: center;
-    background: url(../image/bg1.jpg) no-repeat;
+    background: url(../../public/image/bg1.jpg) no-repeat;
     background-size: cover;
 }
+
 .offer-section h2{
-    margin: 0;
     padding: 0;
     color:#fff;
     font-weight: 700;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     font-size: 26px;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
+
 .offer-section h4{
     font-size: 16px;
     color: #fff;
     display: block;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     margin: 0;
     padding: 0;
 }
+
 .offer-section a{
     background: #008000;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     padding: 10px 30px;
     display: inline-block;
     margin-top: 10px;
     border-radius: 5px;
     transition: all 0.5s
 }
+
 .offer-section a:hover{
     background: #093800;
 }
@@ -357,11 +349,10 @@ OFFER SECTION
 
 .section-title {
     color:  #008000;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     font-weight: 600;
-
-
 }
+
 .benefit-item {
     text-align: center;
     border-top: 1px solid #e2e2e2;
@@ -376,7 +367,7 @@ OFFER SECTION
 
 .benefit-item > h3 {
     color:  #474747;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     font-weight: 600;
 }
 
@@ -387,7 +378,6 @@ OFFER SECTION
     margin: 0;
     padding: 0;
     border-radius: 50%;
-    margin: 0;
     text-align: center;
     display: inline-block;
     width: 200px;
@@ -396,13 +386,13 @@ OFFER SECTION
 
 .benefit-item > h2 {
     color: #008000;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     font-size: 18px;
     font-weight: 700;
 }
 
 .benefit-item > p {
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-size: 15px;
     line-height: 24px;
     color: #5e5e5e;
@@ -414,6 +404,7 @@ OFFER SECTION
     background: #008000;
     color: #2EFF7B
 }
+
 .benefit-item:hover p{
     color: #fff;
 }
@@ -430,10 +421,9 @@ OFFER SECTION
     color: #fff;
 }
 
-
-/*
-MESSAGE SECTION
- */
+/********************
+ * 5. MESSAGE SECTION
+ ********************/
 .message-section {
     padding: 75px 0;
     text-align: center;
@@ -442,13 +432,13 @@ MESSAGE SECTION
 }
 .message-section h2{
     font-size: 30px;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     font-weight: 700;
     text-align: center;
     color:#008000
 }
 .message-section p{
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -457,7 +447,7 @@ MESSAGE SECTION
 
 .news-section {
     display: block;
-    background: url(../image/news-bg.jpg) no-repeat;
+    background: url(../../public/image/news-bg.jpg) no-repeat;
     background-size: cover;
     padding: 75px 0;
 }
@@ -467,6 +457,7 @@ MESSAGE SECTION
 
 .news-item {
 }
+
 .news-deatils {
     background: #fff;
     display: block;
@@ -495,23 +486,23 @@ MESSAGE SECTION
 .content > span {
     font-size: 20px;
     color: #777777;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
 
 }
 
 .content > p {
     font-size: 30px;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     font-weight: 700;
     text-align: left;
     color:#008000;
     line-height: 40px;
 }
 
-/*
-CLIENT SECTION
- */
+/*******************
+ * 6. CLIENT SECTION
+ *******************/
 .client-section {
     text-align: center;
     display: block;
@@ -522,7 +513,7 @@ CLIENT SECTION
     color: #008000;
     font-weight: 700;
     font-size: 34px;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -530,7 +521,7 @@ CLIENT SECTION
 .client-section .title-cap {
     font-size: 16px;
     color: #474747;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
     display: block;
     margin-bottom: 30px;
@@ -548,8 +539,7 @@ i.fa.fa-quote-left {
 
 .client-item .client-content {
     background: #fff;
-    padding: 20px;
-    padding-bottom: 60px;
+    padding: 20px 20px 60px;
     box-shadow: 0 1px 10px 1px #E8E8E8;
 }
 
@@ -559,14 +549,13 @@ i.fa.fa-quote-left {
 
 .client-item .client-content {
     background: #fff;
-    padding: 20px;
-    padding-bottom: 60px;
+    padding: 20px 20px 60px;
 }
 
 .client-item p {
     font-size: 14px;
     color: #474747;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
 }
 
@@ -576,12 +565,12 @@ i.fa.fa-quote-left {
 .client-item > h3 {
     color: #008000;
     font-weight: 600;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     font-size: 16px;
     position: relative;
     top: -40px;
-
 }
+
 .client-item a {
     height: 80px;
     width: 80px;
@@ -593,9 +582,9 @@ i.fa.fa-quote-left {
     top: -40px;
 }
 
-/*
-    BLOG SECTION
-*/
+/*****************
+ * 7. BLOG SECTION
+ *****************/
 .blog-section {
     background: #fff;
     display: block;
@@ -607,7 +596,7 @@ i.fa.fa-quote-left {
     color: #008000;
     font-weight: 700;
     font-size: 34px;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -615,7 +604,7 @@ i.fa.fa-quote-left {
 .blog-section .title-cap {
     font-size: 16px;
     color: #474747;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
     display: block;
     margin-bottom: 30px;
@@ -632,29 +621,26 @@ i.fa.fa-quote-left {
     display: block;
 }
 
-
 .blog-thumb > img {
 }
-
 
 .blog-content {
     text-align: left;
 }
 
 .blog-content > h3 {
-    margin: 0;
     padding: 0;
     font-size: 18px;
     font-weight: 700;
     color: #008000;
-    font-family:'ProximaNovaA-Bold';
-    margin-bottom: 10px;
+    font-family:'ProximaNovaA-Bold', sans-serif;
+    margin: 0 0 10px;
 }
 
 .blog-content > p {
     font-size: 14px;
     color: #474747;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
     line-height: 24px;
     display: block;
@@ -665,12 +651,11 @@ i.fa.fa-quote-left {
     color: #008000
 }
 
-
-/*
-TABLE SECTION
-*/
+/******************
+ * 8. TABLE SECTION
+ ******************/
 .table-section {
-    background: url(../image/table-bg.png) no-repeat;
+    background: url(../../public/image/table-bg.png) no-repeat;
     background-size: cover;
     display: block;
     text-align: center;
@@ -681,7 +666,7 @@ TABLE SECTION
     color: #fff;
     font-weight: 700;
     font-size: 34px;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -689,12 +674,13 @@ TABLE SECTION
 .table-section .section-cap {
     font-size: 16px;
     color: #fff;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
     display: block;
     margin-bottom: 30px;
 }
-.table-content{
+
+.table-content {
     padding: 0 50px;
     display: block;
 }
@@ -713,25 +699,27 @@ TABLE SECTION
     font-size: 50px;
     font-weight: 600;
     color: #303030;
-    font-family:'ProximaNovaA-Semibold';
+    font-family:'ProximaNovaA-Semibold', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .table-item > h2 > sup {
     color: #303030;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-weight: 400;
 }
-.table-item > h3{
+
+.table-item > h3 {
     font-size: 20px;
     font-weight: 700;
     color: #303030;
-    font-family:'ProximaNovaA-Bold';
+    font-family:'ProximaNovaA-Bold', sans-serif;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
 }
+
 .table-item > a {
     color: #fff;
     font-weight: 600;
@@ -748,14 +736,14 @@ TABLE SECTION
 
 .table-item > ul {
     display: block;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .table-item > ul > li {
     font-size: 16px;
     line-height:30px;
     color: #5e5e5e;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     list-style: none
 }
 
@@ -766,7 +754,6 @@ TABLE SECTION
 .gold > h3 {
     color: #008000;
 }
-
 
 .gold > a {
     background: #008000
@@ -780,9 +767,17 @@ TABLE SECTION
     background: #850062
 }
 
-/*
-FOOTER SECTION
-*/
+/*******************
+ * 9. LOGIN SECTION
+ *******************/
+.form-group > label{
+    text-decoration-color: #fff;
+    font-family: 'ProximaNovaA-Semibold', sans-serif important;
+}
+
+/*********************
+ * 10. FOOTER SECTION
+ *********************/
 .footer-section {
     text-align: center;
     padding: 30px 0
@@ -822,6 +817,7 @@ FOOTER SECTION
     text-align: center;
     color: #919191;
 }
+
 .social-media > li > a:hover , .social-media > li > a:hover i{
     background: #008000;
     color: #fff !important;
@@ -832,14 +828,15 @@ FOOTER SECTION
     margin-top: 10px;
     font-size: 18px;
 }
+
 .social-media > li > a:hover , .social-media > li > a:hover i{
     background: #008000;
     color: #fff !important;
 }
 
-
 .copyright {
 }
+
 .copyright ul{}
 .copyright ul li{ }
 .copyright ul li a{
@@ -853,9 +850,10 @@ FOOTER SECTION
 .copyright > p , .copyright > p a{
     color: #008000;
     font-weight: 600;
-    font-family:'ProximaNovaA-Regular';
+    font-family:'ProximaNovaA-Regular', sans-serif;
     font-size: 16px;
 }
+
 .copyright > p a:hover{
     color: #000
 }
@@ -864,27 +862,24 @@ FOOTER SECTION
     height: 40px;
     width: 40px;
     display: block;
-    background: url(../image/arrow.bg.png) #008000 no-repeat;
+    background: url(../../public/image/arrow.bg.png) #008000 no-repeat center;
     background-size: auto;
-    background-position: center;
     border-radius: 50%;
     float: right;
     margin-top: 30px;
-    display: block;
 }
 
-/*
-RESPONSIVE
-*/
-
+/*************************
+ * 11. RESPONSIVE SECTION
+* ***********************/
 @media (max-width: 1200px) {
     .navbar-nav {
         margin-left: 30px;
     }
+
     .navbar-nav > li > a{
         font-size: 12px;
     }
-
 }
 
 @media (max-width: 992px) {
@@ -892,9 +887,11 @@ RESPONSIVE
         width: 100%;
         text-align: center;
     }
+
     ul.nav.navbar-nav {
         margin: 0;
     }
+
     .navbar-brand {
         height: auto;
         padding-left: 0;
@@ -903,14 +900,17 @@ RESPONSIVE
         margin: 0 auto;
         display: inline-block;
     }
+
     .news-item {
         margin: 20px 0;
     }
+
     .table-content {
         padding: 0 50px;
         display: block;
         margin: 40px 0;
     }
+
     .social-media {
         margin-top: 24px;
         display: block;
@@ -918,46 +918,53 @@ RESPONSIVE
         overflow: hidden;
         text-align: center;
     }
+
     .social-media > li {
         float: none;
         list-style: none;
         margin: 5px;
         display: inline-block;
     }
+
     a.scroll {
         margin: 10px auto;
         float: none;
     }
+
     .blog-thumb a {
         margin: 0 auto;
     }
+
     .blog-content {
         text-align: center;
         margin-bottom: 40px;
     }
 }
+
 @media (max-width: 768px) {
     .navbar-brand {
         height: auto;
         padding-left: 0;
         padding-right: 0;
         float: left;
-        margin: 0 auto;
         display: inline-block;
-        margin-left: 15px;
+        margin: 0 auto 0 15px;
     }
-    button.navbar-toggle.collapsed {
-        margin-top: 25px;
-        margin-top: 25px;
+
+    button.navbar-toggler.collapsed {
+        margin-right: 25px;
     }
+
     .news-item {
         margin: 20px 0;
     }
+
     .table-content {
         padding: 0 50px;
         display: block;
         margin: 40px 0;
     }
+
     .social-media {
         margin-top: 24px;
         display: block;
@@ -965,23 +972,25 @@ RESPONSIVE
         overflow: hidden;
         text-align: center;
     }
+
     .social-media > li {
         float: none;
         list-style: none;
         margin: 5px;
         display: inline-block;
     }
+
     a.scroll {
         margin: 10px auto;
         float: none;
     }
+
     .blog-thumb a {
         margin: 0 auto;
     }
+
     .blog-content {
         text-align: center;
         margin-bottom: 40px;
     }
-
-
 }

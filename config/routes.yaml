@@ -29,8 +29,24 @@ about:
 
 contact:
   path: /Contact
-  controller: App\Controller\ContactController::index
+  controller: App\Controller\ContactController::contact
 
 login:
-  path: /Connexion
-  controller: App\Controller\LoginController::index
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+logout:
+  path: /logout
+
+
+newuser:
+  path: /newuser
+  controller: App\Controller\SecurityController::create
+
+admin:
+  path: /admin
+  controller: App\Controller\AdminController::index
+
+compte:
+  path: /compte
+  controller: App\Controller\CompteController::index
