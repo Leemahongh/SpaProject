@@ -4,12 +4,14 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\USERSRepository")
  */
 class USERS implements UserInterface,\Serializable
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -19,16 +21,20 @@ class USERS implements UserInterface,\Serializable
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=100)
      */
     private $NOM;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=100)
      */
     private $PRENOM;
 
     /**
-     * @ORM\Column(type="string", length=40)
+     * @ORM\Column(type="datetime")
      */
     private $BIRTHDAY;
 
@@ -44,44 +50,66 @@ class USERS implements UserInterface,\Serializable
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $ADRESS;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=8)
      */
     private $POSTAL_CODE;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=5, max=5)
      */
     private $CITY;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=6, max=255)
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=255)
      */
     private $username;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNOM(): ?string
     {
         return $this->NOM;
     }
 
+    /**
+     * @param string $NOM
+     * @return USERS
+     */
     public function setNOM(string $NOM): self
     {
         $this->NOM = $NOM;
@@ -89,11 +117,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPRENOM(): ?string
     {
         return $this->PRENOM;
     }
 
+    /**
+     * @param string $PRENOM
+     * @return USERS
+     */
     public function setPRENOM(string $PRENOM): self
     {
         $this->PRENOM = $PRENOM;
@@ -101,28 +136,31 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
-    public function getBIRTHDAY(): ?string
+    /**
+     * @return \DateTimeInterface|null
+     */
+    public function getBIRTHDAY(): ?\DateTimeInterface
     {
         return $this->BIRTHDAY;
     }
 
-    public function setBIRTHDAY(string $BIRTHDAY): self
+    /**
+     * @param \DateTimeInterface $BIRTHDAY
+     * @return USERS
+     */
+    public function setBIRTHDAY(\DateTimeInterface $BIRTHDAY): self
     {
         $this->BIRTHDAY = $BIRTHDAY;
 
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getADMIN(): ?bool
     {
         return $this->ADMIN;
-    }
-
-    public function setADMIN(bool $ADMIN): self
-    {
-        $this->ADMIN = $ADMIN;
-
-        return $this;
     }
 
     /**
@@ -134,13 +172,22 @@ class USERS implements UserInterface,\Serializable
             $this->CREATED_AT = new \DateTime();
         } catch (\Exception $e) {
         }
+
+        $this->ADMIN = '0';
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getCREATEDAT(): ?\DateTimeInterface
     {
         return $this->CREATED_AT;
     }
 
+    /**
+     * @param \DateTimeInterface $CREATED_AT
+     * @return USERS
+     */
     public function setCREATEDAT(\DateTimeInterface $CREATED_AT): self
     {
         $this->CREATED_AT = $CREATED_AT;
@@ -148,11 +195,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getADRESS(): ?string
     {
         return $this->ADRESS;
     }
 
+    /**
+     * @param string|null $ADRESS
+     * @return USERS
+     */
     public function setADRESS(?string $ADRESS): self
     {
         $this->ADRESS = $ADRESS;
@@ -160,11 +214,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPOSTALCODE(): ?string
     {
         return $this->POSTAL_CODE;
     }
 
+    /**
+     * @param string|null $POSTAL_CODE
+     * @return USERS
+     */
     public function setPOSTALCODE(?string $POSTAL_CODE): self
     {
         $this->POSTAL_CODE = $POSTAL_CODE;
@@ -172,11 +233,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getCITY(): ?string
     {
         return $this->CITY;
     }
 
+    /**
+     * @param string|null $CITY
+     * @return USERS
+     */
     public function setCITY(?string $CITY): self
     {
         $this->CITY = $CITY;
@@ -184,11 +252,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPassword(): ?string
     {
         return $this->password;
     }
 
+    /**
+     * @param string $password
+     * @return USERS
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -196,11 +271,18 @@ class USERS implements UserInterface,\Serializable
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * @param string $email
+     * @return USERS
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -218,6 +300,10 @@ class USERS implements UserInterface,\Serializable
         return $this->username;
     }
 
+    /**
+     * @param string $username
+     * @return USERS
+     */
     public function setUsername(string $username): self
     {
         $this->username = $username;

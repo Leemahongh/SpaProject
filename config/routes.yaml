@@ -41,7 +41,7 @@ logout:
 
 newuser:
   path: /newuser
-  controller: App\Controller\SecurityController::create
+  controller: App\Controller\UsersController::createUser
 
 admin:
   path: /admin

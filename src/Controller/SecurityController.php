@@ -8,6 +8,10 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
 
+    /**
+     * @param AuthenticationUtils $authenticationUtils
+     * @return Response
+     */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         // récupère les erreurs de login si il y en a
@@ -16,14 +20,11 @@ class SecurityController extends AbstractController
         // Dernier nom d'utilisateur entré par l'utilisateur
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('pages/login.html.twig', [
+        return $this->render('security/login.html.twig', [
             'last_username' => $lastUsername,
             'error' => $error
         ]);
     }
 
-    //public function create(){
-    //    return $this->render('security/Fuser.html.twig');
-    //}
 }
 

@@ -26,7 +26,7 @@ class ContactController extends AbstractController
             //notifie le contact par un mail
             $notification->notify($contact);
             // retourne un message de bon déroulement de la soumission
-            $this->addFlash('success','Votre Message a bien été envoyé, nou vous répondrons dans les plus bref délais');
+            $this->addFlash('success','Votre Message a bien été envoyé, nous vous répondrons dans les plus bref délais');
             return $this->redirectToRoute('contact');
         }
 

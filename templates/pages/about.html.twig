@@ -4,16 +4,33 @@
 
 {% block body %}
 
-    <div class="offer-section">
+    <div class="cover-section" id="top-button">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow fadeInDown animated">
-                    <h4>Notre offre spéciale : </h4>
-                    <h2>Massage de 45 min. pour seulement 65€</h2>
-                    <a href="#">Prenez un rendez-vous !</a>
+            <div class="row center">
+                <h1>Nous conna&icirc;tre !</h1>
+            </div>
+            <div class="row center box">
+                <div class="col-md-8">
+                    <!-- Géolocalisation Google Map via iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11557.789458480393!2d5.4817478!3d43.5972261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70a38925639640bb!2sViault+Chervier+Anne-C%C3%A9cile!5e0!3m2!1sfr!2sfr!4v1548885426453" width="650em" height="500em" class="map" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="col-md-4">
+                    <img src="{{ asset('image/portrait.jpg') }}" class="rounded-circle benefit-item" alt="avatar image">
+                </div>
+                <h4 class="font-weight-bold mb-3">Anne-Cécile Viault Chervier</h4>
+                <strong>Kinésithérapeute</strong>
+                <hr>
+                <p>T&eacute;l&eacute;phone : <strong>04 42 54 34 83</strong>
+                <hr>
+                E-mail : <strong><a href="mailto:gvbeaumont@gmail.com"> gvbeaumont@gmail.com</a></strong>
+                <hr>
+                Adresse : <strong>27 Bis, Rue de l'Agnel
+                    <br>13770 Venelles</strong>
+                </p>
             </div>
         </div>
     </div>
+
+
 
 {% endblock %}

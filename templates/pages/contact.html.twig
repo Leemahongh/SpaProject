@@ -11,6 +11,22 @@
             </div>
             <h1>Nous contacter !</h1>
         </div>
+
+        <!-- En cas de succès d'envoi du mail, on affiche un message-->
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <!-- En cas d'erreur dans la saisie du formulaire, on affiche un message-->
+        {% if not form.vars.valid %}
+            <div class="alert alert-warning">
+                Veuillez v&eacute;rifier les informations de votre formulaire : elles ne sont pas conformes !
+            </div>
+        {% endif %}
+
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="media-container-column col-lg-8" data-form-type="formoid">

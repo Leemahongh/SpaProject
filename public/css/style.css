@@ -15,6 +15,20 @@ body {
     overflow: visible;
 }
 
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.map{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+}
+
 div.body {
     height: 100%;
     width: 100%;
@@ -748,7 +762,7 @@ i.fa.fa-quote-left {
 }
 
 .sliver > a {
-    background: #45c9eb,
+    background: #45c9eb;
 }
 
 .gold > h3 {

@@ -1,29 +1,58 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Enregistrement{% endblock %}
+
 {% block body %}
 
     <div class="cover-section">
         <div class="container">
+            <h1>Nous rejoindre</h1>
             <div class="d-flex flex-row justify-content-center login">
-                <form action="{{ path('newuser') }}" method="post">
-                    <div class="form-group">
-                        <label class="green" for="username">Nom</label>
-                        <input type="text" id="nom" name="_nom" class="form-control" value="{{ NOM }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Pr&eacute;nom</label>
-                        <input type="text" id="prenom" name="_prenom" class="form-control" value="{{ PRENOM }}">
-                    </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="media-container-column col-lg-8" data-form-type="formoid">
+                            {{ form_start(registrationForm) }}
 
-                    <button type="submit" class="btn btn-success">S'enregistrer !</button>
-                </form>
+                            <div class="my-custom-class-for-errors">
+                                {{ form_errors(registrationForm) }}
+                            </div>
+
+                            <div class="row row-sm-offset">
+                                <div class="col-md-6 multi-horizontal" data-for="firstname">
+                                    {{ form_row(registrationForm.NOM) }}
+                                </div>
+                                <div class="col-md-6 multi-horizontal" data-for="lastname">
+                                    {{ form_row(registrationForm.PRENOM) }}
+                                </div>
+                                <div class="col-md-6 multi-horizontal" data-for="username">
+                                    {{ form_row(registrationForm.USERNAME) }}
+                                </div>
+                                <div class="col-md-6 multi-horizontal" data-for="password">
+                                    {{ form_row(registrationForm.PASSWORD) }}
+                                </div>
+                                <div class="col-md-6 multi-horizontal" data-for="adress">
+                                   {{ form_row(registrationForm.ADRESS) }}
+                                </div>
+                                <div class="col-md-3 multi-horizontal" data-for="postalCode">
+                                   {{ form_row(registrationForm.POSTAL_CODE) }}
+                                </div>
+                                <div class="col-md-3 multi-horizontal" data-for="city">
+                                   {{ form_row(registrationForm.CITY) }}
+                                </div>
+                                <div class="col-md-8 multi-horizontal" data-for="city">
+                                   {{ form_row(registrationForm.EMAIL) }}{{ form_help(registrationForm) }}
+                                </div>
+                                {{ form_rest(registrationForm) }}
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-success">S'enregistrer !</button>
+                            </div>
+                            {{ form_end(registrationForm) }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 {% endblock %}
-
-{% block title %}
-    Enregistrement
-{% endblock %}
-
