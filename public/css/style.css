@@ -27,7 +27,6 @@ body {
 .map{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-}
 
 div.body {
     height: 100%;
@@ -789,7 +788,7 @@ label{
 }
 
 a{
-    color: #fff;
+    color: #118d3f;
 }
 
 a:hover{
@@ -889,6 +888,7 @@ a:hover{
     float: right;
     margin-top: 30px;
 }
+
 
 /*************************
  * 11. RESPONSIVE SECTION

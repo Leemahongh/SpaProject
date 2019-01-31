@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="col-md-12 wow fadeInDown animated">
                     <div class="slider-item">
-                        <img src="image/logo-simple.png" width="117" height="144" alt="">
-                        <h2>Anne-Cécile Viault Chervier</h2>
-                        <p>Masseur-kinésithérapeute à Venelles, je vous propose des prestations de Massage Californien à mon cabinet pour tous les particuliers.</p>
+                        <img src="{{ asset('image/logo-simple.png') }}" width="117" height="144" alt="">
+                        <h2>Anne-C&eacute;cile Viault Chervier</h2>
+                        <p>Masseur-kin&eacute;sith&eacute;rapeute &agrave; Venelles, je vous propose des prestations de Massage Californien &agrave; mon cabinet pour tous les particuliers.</p>
                     </div>
                 </div>
             </div>
@@ -22,9 +22,9 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="purifliy-item wow fadeInDown animated">
-                        <h3>Découvrez les bienfaits du massage Californien</h3>
-                        <p>« Le massage est aussi nécessaire à l'être humain que les céréales dont il se nourrit » disait Socrate.</p>
-                        <p>Un art que le sage Orient n'a jamais oublié, les indiens le pratiquent tous  les jours.</p>
+                        <h3>D&eacute;couvrez les bienfaits du massage Californien</h3>
+                        <p>&laquo; Le massage est aussi n&eacute;cessaire &agrave; l&apos;&ecirc;tre humain que les c&eacute;r&eacute;ales dont il se nourrit &raquo; disait Socrate.</p>
+                        <p>Un art que le sage Orient n'a jamais oubli&eacute;, les indiens le pratiquent tous  les jours.</p>
                     </div>
                 </div>
             </div>
@@ -34,10 +34,10 @@
     <div class="offer-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 wow fadeInDown animated">
-                    <h4>Notre offre spéciale : </h4>
-                    <h2>Massage de 45 min. pour seulement 65€</h2>
-                    <a href="#">Prenez un rendez-vous !</a>
+                <div class="col-md-12 wow fadeInDown animated disabled" data-toggle="tooltip" data-placement="bottom" title="Bientôt disponible">
+                    <h4>Notre offre sp&eacute;ciale : </h4>
+                    <h2>Massage de 45 min. pour seulement 65&euro;</h2>
+                    <a href="{{ path('contact') }}">Prenez un rendez-vous !</a>
                 </div>
             </div>
         </div>
@@ -47,33 +47,33 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title">Les bénéfices du bien-être</h2>
+                    <h2 class="section-title">Les b&eacute;n&eacute;fices du bien-&ecirc;tre</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3 benefit-item wow fadeInDown animated" data-wow-delay="0.2s">
                     <h3>Benefice 1</h3>
-                    <a href="#"><img src="image/beneifit1.png" width="207" height="208" class="img-responsive" alt=""></a>
+                    <a href="#"><img src="{{ asset('image/beneifit1.png') }}" width="207" height="208" class="img-responsive" alt=""></a>
                     <h2>Equilibre</h2>
-                    <p>Un retour à l'équilibre nerveux.</p>
+                    <p>Un retour &agrave; l&apos;&eacute;quilibre nerveux.</p>
                 </div>
                 <div class="col-md-3 benefit-item wow fadeInDown animated" data-wow-delay="0.4s">
                     <h3>Benefice 2</h3>
-                    <a href="#"><img src="image/benefit2.png" width="207" height="208"  class="img-responsive" alt=""></a>
+                    <a href="#"><img src="{{ asset('image/benefit2.png') }}" width="207" height="208"  class="img-responsive" alt=""></a>
                     <h2>Apaisement</h2>
-                    <p>Un apaisement provoqué par la stimulation de nombreuses terminaisons nerveuses.</p>
+                    <p>Un apaisement provoqu&eacute; par la stimulation de nombreuses terminaisons nerveuses.</p>
                 </div>
                 <div class="col-md-3 benefit-item wow fadeInDown animated" data-wow-delay="0.6s">
                     <h3>Benefice 3</h3>
-                    <a href="#"><img src="image/benefit3.png" width="225" height="226" class="img-responsive"  alt=""></a>
-                    <h2>Récupération</h2>
-                    <p>Quand la kiné rejoint le sport et améliore la récupération.</p>
+                    <a href="#"><img src="{{ asset('image/benefit3.png') }}" width="225" height="226" class="img-responsive"  alt=""></a>
+                    <h2>R&eacute;cup&eacute;ration</h2>
+                    <p>Quand la kin&eacute; rejoint le sport et am&eacute;liore la r&eacute;cup&eacute;ration.</p>
                 </div>
                 <div class="col-md-3 benefit-item wow fadeInDown animated" data-wow-delay="0.8s">
                     <h3>Benefice 4</h3>
-                    <a href="#"><img src="image/benefit4.png" width="207" height="208" class="img-responsive"  alt=""></a>
+                    <a href="#"><img src="{{ asset('image/benefit4.png') }}" width="207" height="208" class="img-responsive"  alt=""></a>
                     <h2>Estime</h2>
-                    <p>Amélioration rapide de son estime personnel et de sa prise en charge.</p>
+                    <p>Am&eacute;lioration rapide de son estime personnel et de sa prise en charge.</p>
                 </div>
             </div>
         </div>
@@ -84,8 +84,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 wow fadeInDown animated">
                     <h2 class="section-title">MASSAGE CALIFORNIEN</h2>
-                    <p>Partant d'effleurages doux, enveloppants et relaxants, les manoeuvres s’enchaînent et s’intensifient pour soulager des tensions plus profondes. Cela peut faire surgir et libérer des émotions cachées, inscrites dans la mémoire corporelle. Plus la personne massée s’abandonne à l'expérience, plus elle s'ouvre à ce que le massage californien qualifie de toucher du coeur.</p>
-                    <p>Profondément sensible, le bon déroulement du massage californien dépend totalement de la connexion entre le donneur et le receveur. En effet, il est primordial que le thérapeute soit à l'écoute et que le massé soit en totale confiance.</p>
+                    <p>Partant d'effleurages doux, enveloppants et relaxants, les manoeuvres s&rsquo;encha&icirc;nent et s&rsquo;intensifient pour soulager des tensions plus profondes. Cela peut faire surgir et libérer des émotions cachées, inscrites dans la mémoire corporelle. Plus la personne massée s’abandonne à l'expérience, plus elle s'ouvre à ce que le massage californien qualifie de toucher du coeur.</p>
+                    <p>Profond&eacute;ment sensible, le bon d&eacute;roulement du massage californien dépend totalement de la connexion entre le donneur et le receveur. En effet, il est primordial que le thérapeute soit à l'écoute et que le massé soit en totale confiance.</p>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <div class="col-md-6 news-item">
                     <div class="news-deatils wow fadeInDown animated" data-wow-delay="0.2s">
                         <div class="col-md-6 thumbnail">
-                            <img src="image/blog1.png" width="249" height="272" alt="" class="img-responsive">
+                            <img src="{{ asset('image/blog1.png') }}" width="249" height="272" alt="" class="img-responsive">
                         </div>
                         <div class="col-md-6 content">
                             <span>23 Dec 2018</span>
@@ -108,7 +108,7 @@
                 <div class="col-md-6 news-item">
                     <div class="news-deatils wow fadeInDown animated" data-wow-delay="0.5s">
                         <div class="col-md-6 thumbnail">
-                            <img src="image/blog2.jpg" width="249" height="272" alt="" class="img-responsive">
+                            <img src="{{ asset('image/blog2.jpg') }}" width="249" height="272" alt="" class="img-responsive">
                         </div>
                         <div class="col-md-6 content">
                             <span>09 jan 2019</span>
@@ -135,7 +135,7 @@
                             <i class="fa fa-quote-left"></i>
                             <p>Un moment très agréable et une belle rencontre. Un grand merci ! Je reviendrai sans doute trés vite...</p>
                         </div>
-                        <a href="#"><img src="image/client1.png" alt=""> </a>
+                        <a href="#"><img src="{{ asset('image/client1.png') }}" alt=""> </a>
                         <h3>Natacha D.</h3>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                             <i class="fa fa-quote-left"></i>
                             <p>Très bonne séance de massage  qui a immédiatement soulagé mes tensions du dos. Je recommande vivement ! </p>
                         </div>
-                        <a href="#"><img src="image/client2.png"  alt=""> </a>
+                        <a href="#"><img src="{{ asset('image/client2.png') }}"  alt=""> </a>
                         <h3>Nadia R.</h3>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                             <i class="fa fa-quote-left"></i>
                             <p>D'une grande douceur et d'un grand professionnalisme. Je me suis relâchée complétement, un vrai moment de détente.</p>
                         </div>
-                        <a href="#"><img src="image/client.png"alt=""> </a>
+                        <a href="#"><img src="{{ asset('image/client.png') }}"alt=""> </a>
                         <h3>Carla S.</h3>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                 <div class="col-md-6 wow fadeInDown animated" data-wow-delay="0.2s">
                     <div class="row">
                         <div class="col-md-3 blog-thumb">
-                            <a href="#"><img src="image/blog-item1.png" width="127" height="190" alt=""></a>
+                            <a href="#"><img src="{{ asset('image/blog-item1.png') }}" width="127" height="190" alt=""></a>
                         </div>
                         <div class="col-md-9 blog-content">
                             <h3>Carla S.</h3>
@@ -187,7 +187,7 @@
                 <div class="col-md-6 wow fadeInDown animated" data-wow-delay="0.5s">
                     <div class="row">
                         <div class="col-md-3 blog-thumb">
-                            <a href="#"><img src="image/blog-item2.png" width="127" height="190" alt=""></a>
+                            <a href="#"><img src="{{ asset('image/blog-item2.png') }}" width="127" height="190" alt=""></a>
                         </div>
                         <div class="col-md-9 blog-content">
                             <h3>Natacha D.</h3>
