@@ -13,13 +13,13 @@
 	Web designer: Andy Zyner (by AD)
 	From: Cologne, Deutchland
 
-	Developper Front end : Daisy D. Enhör
+	Developper Front end: Daisy D. Enhör (by AD)
 	From: Stokholm, Sweden
 
-	Developper Front end : Alex Ception
+	Developper Front end: Alex Ception (by AD)
 	From: Marseille, France
 
-	Project Manager: Maude Hérateur(by AD)
+	Project Manager: Maude Hérateur (by AD)
 	From: Lille, France
 
 /* THANKS */
