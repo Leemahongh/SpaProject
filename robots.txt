@@ -8,4 +8,4 @@ User-agent: EtaoSpider
 Disallow: /
 
 # Sitemap files
-Sitemap: http://http://spaproject036.alwaysdata.net//sitemap.xml
+Sitemap: http://spaproject036.alwaysdata.net/sitemap.xml

@@ -48,7 +48,7 @@
 		
 
 /* SITE */
-	Last update: 2019/02/01
+	Last update: 2019/02/03
 	Language: French
 	Standards: PHP, HTML5, CSS3, JS, Jquery, MySQL
 	Doctype: HTML5
