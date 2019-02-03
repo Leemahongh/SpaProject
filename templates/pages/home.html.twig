@@ -9,9 +9,21 @@
                 <div class="col-md-12 wow fadeInDown animated">
                     <div class="slider-item">
                         <img src="{{ asset('image/logo-simple.png') }}" width="117" height="144" alt="">
-                        <h2>Anne-C&eacute;cile Viault Chervier</h2>
+
+                        {% if app.user %}
+                        <h1>Bienvenue {{ app.user.prenom }} {{ app.user.nom }}.</h1>
+                         {% else %}
+                        <h1>Anne-C&eacute;cile Viault Chervier</h1>
                         <p>Masseur-kin&eacute;sith&eacute;rapeute &agrave; Venelles, je vous propose des prestations de Massage Californien &agrave; mon cabinet pour tous les particuliers.</p>
+                        {%  endif %}
                     </div>
+                    {% for messages in app.flashes %}
+                        {% for message in messages %}
+                            <div class="alert alert-success">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -22,7 +34,11 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="purifliy-item wow fadeInDown animated">
+                        {% if app.user %}
+                        <h3>{{ app.user.prenom }} d&eacute;couvrez les bienfaits du massage Californien</h3>
+                        {% else %}
                         <h3>D&eacute;couvrez les bienfaits du massage Californien</h3>
+                        {%  endif %}
                         <p>&laquo; Le massage est aussi n&eacute;cessaire &agrave; l&apos;&ecirc;tre humain que les c&eacute;r&eacute;ales dont il se nourrit &raquo; disait Socrate.</p>
                         <p>Un art que le sage Orient n'a jamais oubli&eacute;, les indiens le pratiquent tous  les jours.</p>
                     </div>
@@ -35,8 +51,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 wow fadeInDown animated disabled" data-toggle="tooltip" data-placement="bottom" title="Bientôt disponible">
-                    <h4>Notre offre sp&eacute;ciale : </h4>
-                    <h2>Massage de 45 min. pour seulement 65&euro;</h2>
+                    {% if app.user %}
+                    <h2>{{ app.user.prenom }}, rien que pour vous : </h2>
+                    <h2>Le massage de 45 min. pour seulement 59&euro; au lieu de 65&euro; !</h2>
+                    {% else %}
+                    <h2>Notre offre sp&eacute;ciale : </h2>
+                    <h2>Le massage de 45 min. pour seulement 65&euro;</h2>
+                    {%  endif %}
                     <a href="{{ path('contact') }}">Prenez un rendez-vous !</a>
                 </div>
             </div>

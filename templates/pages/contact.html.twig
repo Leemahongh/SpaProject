@@ -12,13 +12,6 @@
             <h1>Nous contacter !</h1>
         </div>
 
-        <!-- En cas de succès d'envoi du mail, on affiche un message-->
-        {% for message in app.flashes('success') %}
-            <div class="alert alert-success">
-                {{ message }}
-            </div>
-        {% endfor %}
-
         <!-- En cas d'erreur dans la saisie du formulaire, on affiche un message-->
         {% if not form.vars.valid %}
             <div class="alert alert-warning">

@@ -1,0 +1,11 @@
+﻿User-agent: *
+Disallow: *
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: EtaoSpider
+Disallow: /
+
+# Sitemap files
+Sitemap: http://http://spaproject036.alwaysdata.net//sitemap.xml

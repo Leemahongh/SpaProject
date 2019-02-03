@@ -9,6 +9,13 @@
             <h1>
                 Acc&eacute;dez &agrave; bien plus, connectez-vous !
             </h1>
+
+            {% for message in app.flashes('success1') %}
+                <div class="alert alert-success">
+                   {{ message }}
+                </div>
+            {% endfor %}
+
             {% if error %}
 
                 <div class="alert alert-danger">

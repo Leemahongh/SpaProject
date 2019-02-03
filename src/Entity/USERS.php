@@ -51,21 +51,21 @@ class USERS implements UserInterface,\Serializable
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank()
-     * @Assert\Email()
+     * @Assert\Length(min=1, max=255)
      */
     private $ADRESS;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=8)
+     * @Assert\Length(min=5, max=5)
      */
     private $POSTAL_CODE;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank()
-     * @Assert\Length(min=5, max=5)
+     * @Assert\Length(min=2, max=255)
      */
     private $CITY;
 
@@ -327,7 +327,11 @@ class USERS implements UserInterface,\Serializable
      */
     public function getRoles()
     {
-        return ['ROLE_ADMIN'];
+        $roles = ['ROLE_USER'];
+        if ($this->getADMIN()) {
+            $roles[] = 'ROLE_ADMIN';
+        }
+        return $roles;
     }
 
     /**

@@ -20,7 +20,7 @@ home :
 #  controller: App\Controller\TestimonyController::index
 
 about:
-  path: /Nous Connaitre
+  path: /nous-connaitre
   controller: App\Controller\AboutController::index
 
 #blog:
@@ -28,7 +28,7 @@ about:
 #  controller: App\Controller\BlogController::index
 
 contact:
-  path: /Contact
+  path: /contact
   controller: App\Controller\ContactController::contact
 
 login:
@@ -38,15 +38,14 @@ login:
 logout:
   path: /logout
 
-
 newuser:
   path: /newuser
   controller: App\Controller\UsersController::createUser
 
+editprofile:
+  path: /compte
+  controller: App\Controller\UsersController::editprofileUser
+
 admin:
   path: /admin
   controller: App\Controller\AdminController::index
-
-compte:
-  path: /compte
-  controller: App\Controller\CompteController::index

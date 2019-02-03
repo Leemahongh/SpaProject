@@ -44,7 +44,8 @@
                         <li class="nav-item"><a href="{{ path('logout') }}"><i class="fa fa-sign-out"></i></a></li>
                         {% if is_granted('ROLE_ADMIN') %}
                             <li class="nav-item"><a href="{{ path('admin') }}">Admin</a></li>
-                            
+                        {% else %}
+                            <li class="nav-item"><a href="{{ path('editprofile') }}">Mon compte</a></li>
                         {% endif %}
                         {% else %}
                             <li class="nav-item"><a href="{{ path('login') }}"><i class="fa fa-sign-in"></i></a></li>
@@ -83,7 +84,17 @@
                 </div>
             </div>
             <div class="container center">
-                Propos&eacute; par <strong>NoX &copy;</strong> - <a href="{{ path('login') }}"><i class="fa fa-sign-in"></i></a>
+                Propos&eacute; par <strong>NoX &copy;</strong> -
+                {% if app.user %}
+                    <a href="{{ path('logout') }}"><i class="fa fa-sign-out"></i></a>
+                    {% if is_granted('ROLE_ADMIN') %}
+                         - <a href="{{ path('admin') }}">Admin</a>
+                    {% else %}
+                         - <a href="{{ path('editprofile') }}">Mon compte</a>
+                    {% endif %}
+                {% else %}
+                     - <a href="{{ path('login') }}"><i class="fa fa-sign-in"></i></a>
+                {% endif %}
             </div>
         </div>
 

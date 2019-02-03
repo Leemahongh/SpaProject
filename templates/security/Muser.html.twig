@@ -1,15 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Enregistrement{% endblock %}
+{% block title 'Gérer son compte'%}
 
 {% block body %}
 
     <div class="cover-section">
         <div class="container">
-            <h1>Nous rejoindre</h1>
+            <h1>Gérer son compte</h1>
+            <h2>{{ app.user.username }}</h2>
             <div class="d-flex flex-row justify-content-center login">
                 <div class="container">
                     <div class="row justify-content-center">
+
+                        {% for message in app.flashes('success') %}
+                            <div class="alert alert-success">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+
                         <div class="media-container-column col-lg-8" data-form-type="formoid">
                             {{ form_start(registrationForm) }}
 
@@ -41,7 +49,7 @@
                                 {{ form_rest(registrationForm) }}
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-lg btn-success">S'enregistrer !</button>
+                                <button class="btn btn-lg btn-success">Modifier !</button>
                             </div>
                             {{ form_end(registrationForm) }}
                         </div>

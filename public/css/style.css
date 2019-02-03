@@ -118,7 +118,17 @@ a.remove {
     border-width: 1px
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1{
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family:'ProximaNova-Extrabld', sans-serif;
+    color: #fff;
+    margin:0;
+    padding-bottom: 40px;
+}
+
+h2,h3,h4,h5,h6 {
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
@@ -262,15 +272,6 @@ i.fa.fa-shopping-cart {
 }
 
 .slider-item > img {
-}
-
-.slider-item > h2 {
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-family:'ProximaNova-Extrabld', sans-serif;
-    color: #fff;
-    margin:0;
 }
 
 .slider-item > p {
